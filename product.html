@@ -65,6 +65,53 @@
             margin-top: -105px;
             display: flex;
             align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .center-block {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 70vh;
+        }
+
+        .notify-form {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 10px;
+            position: relative;
+        }
+
+        .notify-form input {
+            flex: 1 1 350px;
+            max-width: 500px;
+        }
+
+        .notify-form .btn-cta {
+            flex-shrink: 0;
+        }
+
+        .green-popup {
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-50%) translateY(16px);
+            background: #4BB543;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-size: 18px;
+            z-index: 9999;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            display: none;
+            min-width: 280px;
+            text-align: center;
         }
 
         .card-gradient {
@@ -216,19 +263,18 @@
 
     <!-- Start Hero Section -->
     <div class="hero">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-lg-12 text-center text-light" style="padding-top: 135px;">
-                    <h1 class="p-0 mt-4" style="color: #85CCFF; font-family: medino;">Coming Soon</h1>
-                    <h6 class="text-light">Our products <span style="color: #FF5A3A; font-weight: bold;">Barrel
-                            Link</span> and <span style="color: #00B0F0; font-weight: bold;">AltioraConnect</span> are
-                        currently in development. We anticipate <br> launching alpha testing in August 2025, with a public
-                        release by late Q4 2025.</h6>
-                    <div class="notify-form mt-5">
-                        <input type="text" placeholder="Email Address">
-                        <a href="#" class="btn-cta btn-primary">NOTIFY ME<img src="images/images/call_made.svg" alt=""></a>
-                    </div>
-                </div>
+        <div class="container center-block">
+            <div style="width: 100%; max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+                <h1 class="p-0 mt-4 text-center" style="color: #85CCFF; font-family: 'Poppins', sans-serif;">Coming Soon</h1>
+                <h6 class="text-light text-center" style="margin-bottom: 32px;">Our products <span style="color: #FF5A3A; font-weight: bold;">Barrel
+                        Link</span> and <span style="color: #00B0F0; font-weight: bold;">AltioraConnect</span> are
+                    currently in development. We anticipate <br> launching alpha testing in August 2025, with a public
+                    release by late Q4 2025.</h6>
+                <form class="notify-form mt-5" onsubmit="submitEmail(); return false;">
+                    <input type="text" id="emailInput" placeholder="Email Address">
+                    <a href="#" class="btn-cta btn-primary" onclick="submitEmail(); return false;">NOTIFY ME<img src="images/images/call_made.svg" alt=""></a>
+                    <div id="greenPopup" class="green-popup">Thank you for your interest</div>
+                </form>
             </div>
         </div>
     </div>
@@ -261,6 +307,50 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+      async function submitEmail() {
+        const email = document.getElementById('emailInput').value;
+        const endpoint = "https://script.google.com/macros/s/AKfycbxMtHQ5h6LNtIZmR9zPQuf3DQuGGBImS7Wll5GfK8Ox4kYg9C3VYj2U24WExBdUj0z-/exec";
+
+        if (!email || !validateEmail(email)) {
+          alert("Please enter a valid email.");
+          return;
+        }
+
+        try {
+          const response = await fetch(endpoint, {
+            method: 'POST',
+            body: new URLSearchParams({ email: email }),
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded'
+            }
+          });
+
+          const text = await response.text();
+          if (text === "Success") {
+            showGreenPopup();
+          } else {
+            alert("Error: " + text);
+          }
+          document.getElementById('emailInput').value = "";
+        } catch (err) {
+          console.error(err);
+          alert("Something went wrong.");
+        }
+      }
+
+      function validateEmail(email) {
+        return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email);
+      }
+
+      function showGreenPopup() {
+        const popup = document.getElementById('greenPopup');
+        popup.style.display = 'block';
+        setTimeout(() => {
+          popup.style.display = 'none';
+        }, 3000);
+      }
+    </script>
 </body>
 
 </html>
