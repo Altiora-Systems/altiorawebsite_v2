@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Untree.co">
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+<link rel="manifest" href="images/favicon/site.webmanifest">
+<link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap4" />
+
+	<!-- Bootstrap CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+	<link href="css/tiny-slider.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+	<!-- Font style links -->
+	<link rel="stylesheet" href="Font/Medino_Regular_font (altiora systems).otf">
+	<title>Altiora System </title>
+	<link rel="stylesheet" href="css/custom.css">
+	<style>
+		.nav-container {
+			background-color: #fff;
+			padding: 10px 25px !important;
+			border-radius: 50px;
+			z-index: 9999;
+		}
+
+		.collapse ul li .nav-link {
+			color: #1E1E2E !important;
+		}
+
+		.text-dark{
+			color: #1E1E2E !important;
+		}
+
+		.contact-lisk {
+			background-color: #85CCFF;
+			color: #1E1E2E;
+			font-weight: 900 !important;
+			border-radius: 50px;
+			padding: 5px 25px !important;
+		}
+
+		.hero-img-wrap {
+			padding-top: 100px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding-left: 50px;
+		}
+
+		.hero {
+			background-image: url('images/images/bg_hero.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 440px;
+			margin-top: -105px;
+		}
+
+		.card-gradient {
+			position: relative;
+			overflow: hidden;
+			border-radius: 15px;
+			transition: all 0.3s ease;
+		}
+
+		.card-gradient:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to bottom, rgba(9, 11, 15, 0.8) 0%, rgba(47, 80, 104, 0.8) 100%);
+			z-index: 1;
+			opacity: 0;
+			/* Initially hidden */
+			transition: opacity 0.3s ease;
+		}
+
+		.card-gradient .card-body {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 2;
+			opacity: 0;
+			/* Initially hidden */
+			transform: translateY(20px);
+			/* Slight slide-up effect */
+			transition: opacity 0.3s ease, transform 0.3s ease;
+			padding: 20px;
+			background: transparent;
+			/* Remove white background */
+		}
+
+		.card-gradient:hover:after {
+			opacity: 0.7;
+			/* Show overlay on hover */
+		}
+
+		.card-gradient:hover .card-body {
+			opacity: 1;
+			/* Show content on hover */
+			transform: translateY(0);
+			/* Slide back to original position */
+		}
+
+		.card-gradient:hover .name-sec {
+			display: none !important;
+		}
+
+		.navbar-dark .navbar-toggler-icon {
+			background-image: url(images/menu.png);
+		}
+
+		@media only screen and (max-width: 1199px) {
+			.name-sec {
+				padding: 11px;
+			}
+
+			.name-sec h4 {
+				font-size: 18px;
+			}
+
+			.name-sec h6 {
+				font-size: 11px;
+			}
+		}
+
+		@font-face {
+			font-family: 'Medino';
+			src: url('Font/Medino_Regular_font (altiora systems).otf') format('opentype');
+			font-weight: normal;
+			font-style: normal;
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- Start Header/Navigation -->
+	<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+
+		<div class="container nav-container">
+			<a class="navbar-brand" href="index.html">
+  			<img src="images/images/Navlogo.svg" alt="Altiora System Logo" height="40">
+			</a>
+
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
+				aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarsFurni">
+				<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0 d-flex align-items-center">
+					<li><a class="nav-link" href="about.html">About</a></li>
+					<li><a class="nav-link" href="product.html">Product</a></li>
+					<li class="d-flex align-items-center"><a class="nav-link contact-lisk text-blod"
+							href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</nav>
+	<!-- End Header/Navigation -->
+
+	<!-- Start Hero Section -->
+	<div class="hero">
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-lg-12 text-center text-light" style="padding-top: 135px;">
+					<h1 class="p-0 m-0" style="color: #85CCFF; font-family: medino;">Meet the Altiora Team
+					</h1>
+					<p class="text-light">Visionary leaders driving innovation in Caribbean logistics technology with
+						strategic leadership, operations expertise and cultural understanding</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Hero Section -->
+
+	<!-- Start Product Section -->
+	<div class="product-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="card  card-gradient"
+						style="margin-top: 20px; background-image: url(images/images/card-01.png); height: 470px; position: relative; border-radius: 15px; border: none; align-items: center; background-size: cover; background-repeat: no-repeat;">
+						<div class="name-sec text-center"
+							style="background: #fff; position: absolute; padding: 20px; bottom: 20px; border-radius: 10px;">
+							<h4 class="card-titletext-blod text-dark">Alexander Eadie</h4>
+							<h6 class="card-subtitle mb-2 text-dark">Chief Executive Officer</h6>
+						</div>
+						<div class="card-body text-center">
+							<h4 class="card-title text-light text-blod">Alexander Eadie</h4>
+							<h6 class="card-subtitle mb-2 text-light">Chief Executive Officer</h6>
+							<p class="card-text text-light">Leverages military aviation and logistics expertise with
+								strong Caribbean community ties; holds a BS from Lincoln University and an MBA from
+								William & Mary.</p>
+							<a href="https://www.linkedin.com/in/alexander-eadie/" class="card-link" target="_blank"><img style="padding-right: 10px; cursor: pointer;"
+									src="images/images/linkedin.svg" alt="linkedin"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="card  card-gradient"
+						style="margin-top: 20px; background-image: url(images/images/card-03.png); height: 470px; position: relative; border-radius: 15px; border: none; align-items: center; background-size: cover; background-repeat: no-repeat;">
+						<div class="name-sec text-center"
+							style="background: #fff; position: absolute; padding: 20px; bottom: 20px; border-radius: 10px;">
+							<h4 class="card-titletext-blod text-dark">Steven Glazer</h4>
+							<h6 class="card-subtitle mb-2 text-dark">Chief Strategy Officer</h6>
+						</div>
+						<div class="card-body text-center">
+							<h4 class="card-title text-light text-blod">Steven Glazer</h4>
+							<h6 class="card-subtitle mb-2 text-light">Chief Strategy Officer</h6>
+							<p class="card-text text-light">Guides Altiora's strategic direction using over 13 years of experience in advising executives; holds an MBA from William & Mary.</p>
+							<a href="https://www.linkedin.com/in/steven-glazer/" class="card-link" target="_blank"><img style="padding-right: 10px; cursor: pointer;"
+									src="images/images/linkedin.svg" alt="linkedin"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="card  card-gradient"
+						style="margin-top: 20px; background-image: url(images/images/card-02.png); height: 470px; position: relative; border-radius: 15px; border: none; align-items: center; background-size: cover; background-repeat: no-repeat;">
+						<div class="name-sec text-center"
+							style="background: #fff; position: absolute; padding: 20px; bottom: 20px; border-radius: 10px;">
+							<h4 class="card-titletext-blod text-dark">Peter Lee</h4>
+							<h6 class="card-subtitle mb-2 text-dark">Chief Operating Officer</h6>
+						</div>
+						<div class="card-body text-center">
+							<h4 class="card-title text-light text-blod">Peter Lee</h4>
+							<h6 class="card-subtitle mb-2 text-light">Chief Operating Officer</h6>
+							<p class="card-text text-light">Decades of Army leadership experience, including the Ranger Regiment; holds a BS from West Point and an MBA from William & Mary.</p>
+							<a href="https://www.linkedin.com/in/peterlee88/" class="card-link" target="_blank"><img style="padding-right: 10px; cursor: pointer;"
+									src="images/images/linkedin.svg" alt="linkedin"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="card  card-gradient"
+						style="margin-top: 20px; background-image: url(images/images/card-04.png); height: 470px; position: relative; border-radius: 15px; border: none; align-items: center; background-size: cover; background-repeat: no-repeat;">
+						<div class="name-sec text-center"
+							style="background: #fff; position: absolute; padding: 20px; bottom: 20px; border-radius: 10px;">
+							<h4 class="card-titletext-blod text-dark">Deepayan Sinha</h4>
+							<h6 class="card-subtitle mb-2 text-dark">Engineering Director</h6>
+						</div>
+						<div class="card-body text-center">
+							<h4 class="card-title text-light text-blod">Deepayan Sinha</h4>
+							<h6 class="card-subtitle mb-2 text-light">Engineering Director</h6>
+							<p class="card-text text-light">Mechanical engineer with 5+ years in AI/ML product development; pursuing an MBA at William & Mary.</p>
+							<a href="https://www.linkedin.com/in/dsinha97/" class="card-link" target="_blank"><img style="padding-right: 10px; cursor: pointer;"
+									src="images/images/linkedin.svg" alt="linkedin"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Product Section -->
+
+	<!-- Start Our Mission Section -->
+	<div class="our-section mt-5 mb-5">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<img src="images/images/image_9.png" alt="Our Mission" class="img-fluid"
+						style="border-radius: 20px;">
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<h2 class="fw-bold mb-3 text-dark our-heading">Our Mission</h2>
+					<p class="mb-4 text-dark">To connect people, places, and possibilities through technology – shaping the future
+						of Caribbean logistics with purpose and precision.</p>
+					<div class="d-flex align-items-start mb-3">
+						<img src="images/images/globe.svg" alt="Global Connectivity" width="32" class="me-3 mt-1">
+						<div class="mt-2">
+							<h6 class="fw-bold mb-1 text-dark">Global Connectivity</h6>
+							<p class="mb-0 text-dark">To connect people, places, and possibilities through technology – shaping
+								the future of Caribbean logistics with purpose and precision.</p>
+						</div>
+					</div>
+					<div class="d-flex align-items-start mb-4">
+						<img src="images/images/diversity_1.svg" alt="Cultural Preservation" width="32"
+							class="me-3 mt-1">
+						<div class="mt-2">
+							<h6 class="fw-bold mb-1 text-dark">Cultural Preservation</h6>
+							<p class="mb-0 text-dark">Maintaining the personal touch and cultural significance of Caribbean
+								shipping traditions.</p>
+						</div>
+					</div>
+					<a href="#" class="btn-cta btn-primary" style="border-radius: 50px;">Join our network <img src="images/images/call_made.svg" alt=""></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Our Mission Section -->
+
+	<!-- Start Our Values Section -->
+	<div class="product-section"
+		style="background-image: url( 'images/bg_2nd.png' ); background-size: cover; background-repeat: no-repeat">
+		<div class="container">
+			<div class="row">
+
+				<!-- Start Column 1 -->
+				<div class="col-md-12 col-lg-12 mb-5 mb-lg-0 text-center">
+					<h1 class="mb-1 section-title p-0 text-dark" style="font-family: medino;">Our Values</h1>
+					<p class="mb-4 text-dark">The principles that guide everything we do</p>
+				</div>
+				<!-- End Column 1 -->
+
+				<div class="col-lg-3 col-md-6 col-12">
+					<div class="card m-2 shadow" style="border: 1px solid #85CCFF; height: 300px; display: flex;align-items: center; justify-content: center; border-radius: 20px;">
+						<div class="card-body text-center p-5">
+							<img src="images/images/handshake.svg" alt="">
+							<h5 class="card-title text-dark">Trust</h5>
+							<p class="card-text text-dark">Building reliable relationships through transparency and consistent delivery.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 col-12">
+					<div class="card m-2 shadow" style="border: 1px solid #85CCFF; height: 300px; display: flex;align-items: center; justify-content: center; border-radius: 20px;">
+						<div class="card-body text-center p-5">
+							<img src="images/images/emoji_objects.svg" alt="">
+							<h5 class="card-title text-dark">Innovation</h5>
+							<p class="card-text text-dark">Continuously pushing boundaries to solve complex logistics challenges.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 col-12">
+					<div class="card m-2 shadow" style="border: 1px solid #85CCFF; height: 300px; display: flex;align-items: center; justify-content: center; border-radius: 20px;">
+						<div class="card-body text-center p-5">
+							<img src="images/images/diversity_2.svg" alt="">
+							<h5 class="card-title text-dark">Connection</h5>
+							<p class="card-text text-dark">Serving the Caribbean diaspora with deep cultural understanding.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 col-12">
+					<div class="card m-2 shadow" style="border: 1px solid #85CCFF; height: 300px; display: flex;align-items: center; justify-content: center; border-radius: 20px;">
+						<div class="card-body text-center p-5">
+							<img src="images/images/star_shine.svg" alt="">
+							<h5 class="card-title text-dark">Excellence</h5>
+							<p class="card-text text-dark">Delivering the highest quality solutions and customer experiences.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- End Our Values Section -->
+
+	<!-- Start Testimonial Slider -->
+	<div class="testimonial-section">
+		<div class="container">
+			<div class="row">
+				<div class="card shadow col-12"
+					style="background-image: url( 'images/images/bg_cta.svg' ); background-size: cover; background-repeat: no-repeat; border-radius: 20px;">
+					<div class="card-body d-flex align-items-center"
+						style="height: 400px; justify-content: center; flex-direction: column;">
+						<h1 class="card-title text-center text-blod" style="font-family: medino; color: #fff;">Join Our Mission</h1>
+						<p class="card-text text-light text-center">Ready to be part of transforming Caribbean logistics? We're always looking for passionate partners and investors.</p>
+						<a href="#" class="btn-cta btn-primary">Partner With Us <img src="images/images/call_made.svg" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Testimonial Slider -->
+
+
+	<!-- Start Footer Section -->
+	<footer class="footer-section">
+		<div class="container relative">
+			<div class="row">
+				<div class="col-12 text-center">
+					<img class="p-3" src="images/images/Footerlogo.svg" alt="Footerlogo">
+					<p class="text-light">The only digital platform connecting Caribbean families and carrier <br> for
+						barrel shipping, from their front door to yours.</p>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="container d-flex justify-content-between">
+			<p class="text-light">© 2025 Altiora Systems LLC. All rights reserved.</p>
+			<div class="">
+				<a href="https://www.linkedin.com/company/altiora-systems/" target="_blank"><img style="padding-right: 10px; cursor: pointer;" src="images/images/linkedin.svg" alt="linkedin"></a>
+				<a href="https://x.com/AltioraSystems" target="_blank"><img style="cursor: pointer;" src="images/images/x.svg" alt="x"></a>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer Section -->
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/tiny-slider.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+
+</html>

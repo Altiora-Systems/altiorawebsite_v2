@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Untree.co">
+	<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+<link rel="manifest" href="images/favicon/site.webmanifest">
+<link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap4" />
+
+	<!-- Bootstrap CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+	<link href="css/tiny-slider.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+	<!-- Font style links -->
+	<link rel="stylesheet" href="Font/Medino_Regular_font (altiora systems).otf">
+	<title>Altiora System </title>
+	<link rel="stylesheet" href="css/custom.css">
+	<style>
+		.nav-container {
+			background-color: #fff;
+			padding: 10px 25px !important;
+			border-radius: 50px;
+			z-index: 9999;
+		}
+
+		.collapse ul li .nav-link {
+			color: #1E1E2E !important;
+		}
+
+		.text-dark{
+			color: #1E1E2E !important;
+		}
+
+		.contact-lisk {
+			background-color: #85CCFF;
+			color: #1E1E2E;
+			font-weight: 900 !important;
+			border-radius: 50px;
+			padding: 5px 25px !important;
+		}
+
+		.hero-img-wrap {
+			padding-top: 100px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding-left: 50px;
+		}
+
+		.hero {
+			background-image: url('images/images/bg_hero.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 999px;
+			margin-top: -105px;
+			display: flex;
+			align-items: center;
+		}
+
+		.card-gradient {
+			position: relative;
+			overflow: hidden;
+			border-radius: 15px;
+			transition: all 0.3s ease;
+		}
+
+		.card-gradient:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to bottom, rgba(47, 57, 77, 0.8) 0%, rgba(133, 204, 255, 0.8) 100%);
+			z-index: 1;
+			opacity: 0;
+			/* Initially hidden */
+			transition: opacity 0.3s ease;
+		}
+
+		.card-gradient .card-body {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 2;
+			opacity: 0;
+			/* Initially hidden */
+			transform: translateY(20px);
+			/* Slight slide-up effect */
+			transition: opacity 0.3s ease, transform 0.3s ease;
+			padding: 20px;
+			background: transparent;
+			/* Remove white background */
+		}
+
+		.card-gradient:hover:after {
+			opacity: 0.7;
+			/* Show overlay on hover */
+		}
+
+		.card-gradient:hover .card-body {
+			opacity: 1;
+			/* Show content on hover */
+			transform: translateY(0);
+			/* Slide back to original position */
+		}
+
+		.card-gradient:hover .name-sec {
+			display: none !important;
+		}
+
+		.navbar-dark .navbar-toggler-icon {
+			background-image: url(images/menu.png);
+		}
+
+		.follow-sec {
+			position: absolute;
+			bottom: 0;
+		}
+
+		.notify-form input {
+			outline: none;
+			padding: 12px 12px 14px;
+			font-size: 18px;
+			border-radius: 20px;
+			border: 2px solid #fff;
+			background: #FFFFFF0D 5%;
+			color: #fff;
+			width: 555px;
+		}
+
+		.notify-form input::placeholder {
+			color: #ffffff;
+			opacity: 1;
+		}
+
+		.notify-form button {
+			margin-left: -188px;
+			margin-top: -2px;
+		}
+
+		.hero p{
+			color: #fff;
+		}
+
+		@media only screen and (max-width: 991px) {
+			.follow-sec {
+				position: relative;
+				bottom: 0;
+			}
+		}
+
+		@media only screen and (max-width: 767px) {
+			.follow-sec {
+				position: relative;
+				bottom: 0;
+			}
+			.hero{
+				height: 1200px;
+			}
+		}
+
+		@media only screen and (max-width: 400px) {
+			.hero{
+				height: 1300px;
+			}
+		}
+
+		@font-face {
+			font-family: 'Medino';
+			src: url('Font/Medino_Regular_font (altiora systems).otf') format('opentype');
+			font-weight: normal;
+			font-style: normal;
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- Start Header/Navigation -->
+	<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+
+		<div class="container nav-container">
+			<a class="navbar-brand" href="index.html">
+  			<img src="images/images/Navlogo.svg" alt="Altiora System Logo" height="40">
+			</a>
+
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
+				aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarsFurni">
+				<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0 d-flex align-items-center">
+					<li><a class="nav-link" href="about.html">About</a></li>
+					<li><a class="nav-link" href="product.html">Product</a></li>
+					<li class="d-flex align-items-center"><a class="nav-link contact-lisk text-blod"
+							href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</nav>
+	<!-- End Header/Navigation -->
+
+	<!-- Start Hero Section -->
+	<div class="hero">
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-lg-12 text-center text-light" style="padding-top: 135px;">
+					<h1 class="p-0 m-0" style="color: #85CCFF; font-family: medino;">We would love to hear from you</h1>
+					<!-- Start Contact Form Section -->
+					<div class="container my-5">
+						<div class="row justify-content-between align-items-start" style="position: relative;">
+							<!-- Contact Info -->
+							<div class="col-lg-4 mb-4 text-light" style="text-align: left; ">
+								<h5 class="fw-bold">Our Contact Address?</h5>
+								<p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Williamsburg, VA</p>
+								<p><i class="fas fa-envelope me-2"></i> contact@altiorasystems.com</p>
+
+								<div class="follow-sec">
+									<h6 class="mt-4">Follow Us</h6>
+									<div class="d-flex">
+										<a href="https://x.com/AltioraSystems" target="_blank"><img src="images/images/x.svg" alt="X" class="me-2" style="cursor:pointer;"></a>
+										<a href="https://www.linkedin.com/company/altiora-systems/" target="_blank"><img src="images/images/linkedin.svg" alt="LinkedIn" style="cursor:pointer;"></a>
+									</div>
+								</div>
+							</div>
+
+							<!-- Contact Form -->
+							<div class="col-lg-7">
+								<div class="bg-opacity-25 p-4" style="background: #85CCFF; border-radius: 20px;">
+									<form>
+										<div class="row mb-3">
+											<div class="col-md-6">
+												<input type="text" class="form-control form-control-lg mb-3"
+													placeholder="First Name">
+											</div>
+											<div class="col-md-6">
+												<input type="text" class="form-control form-control-lg mb-3"
+													placeholder="Last Name">
+											</div>
+										</div>
+										<div class="row mb-3">
+											<div class="col-md-6">
+												<input type="email" class="form-control form-control-lg mb-3"
+													placeholder="Email">
+											</div>
+											<div class="col-md-6">
+												<input type="tel" class="form-control form-control-lg mb-3"
+													placeholder="Phone Number">
+											</div>
+										</div>
+										<input type="text" class="form-control form-control-lg mb-3"
+											placeholder="Subject">
+										<textarea class="form-control form-control-lg mb-3" rows="4"
+											placeholder="Write your message..."></textarea>
+										<div class="form-check mb-3" style="text-align: left;">
+											<input class="form-check-input mt-2" type="checkbox" id="agreeCheck">
+											<label class="form-check-label" for="agreeCheck">
+												I agree to receive communications from <strong>Altiora Systems</strong>
+											</label>
+										</div>
+										<div class="row d-flex gap-2">
+											<a href="#" class="col-lg-4 col-md-4 col-xm-12 btn-cta btn-secondary">Send message <img src="images/images/call_made.svg" alt=""></a>
+											<a href="#" class="col-lg-4 col-md-4 col-xm-12 btn-cta btn-outline">Clear form</a>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End Contact Form Section -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Hero Section -->
+
+
+	<!-- Start Footer Section -->
+	<footer class="footer-section">
+		<div class="container relative">
+			<div class="row">
+				<div class="col-12 text-center">
+					<img class="p-3" src="images/images/Footerlogo.svg" alt="Footerlogo">
+					<p class="text-light">The only digital platform connecting Caribbean families and carrier <br> for
+						barrel shipping, from their front door to yours.</p>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="container d-flex justify-content-between">
+			<p class="text-light">© 2025 Altiora Systems LLC. All rights reserved.</p>
+			<div class="">
+				<a href="https://www.linkedin.com/company/altiora-systems/" target="_blank"><img style="padding-right: 10px; cursor: pointer;" src="images/images/linkedin.svg" alt="linkedin"></a>
+    <a href="https://x.com/AltioraSystems" target="_blank"><img style="cursor: pointer;" src="images/images/x.svg" alt="x"></a>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer Section -->
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/tiny-slider.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+
+</html>
