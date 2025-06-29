@@ -202,15 +202,23 @@
             }
         }
 
-        @media only screen and (max-width: 477px) {
-            .notify-form input {
-                width: 350px;
+        @media only screen and (max-width: 450px) {
+            .notify-form {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
             }
-
-            .notify-form button {
-                padding: 7px 20px;
-                margin-left: -150px;
-
+            .notify-form input {
+                width: 100%;
+                max-width: 100%;
+                min-width: 0;
+            }
+            .notify-form button,
+            .notify-form .btn-cta {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 0;
+                box-sizing: border-box;
             }
         }
 
